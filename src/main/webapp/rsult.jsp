@@ -15,6 +15,7 @@ String sun=request.getParameter("saveduname");
 Boolean aa=session.getAttribute("uxx").equals(name);
 Boolean bb=session.getAttribute("pxx").equals(pwd);
 %>   
-<h3 class="<%=aa&&bb ? "Green" : "Red"%>-text"><%=(pwd.equals(spwd)&&(sun.equals(name)) ? "Success" : "Failure")%></h3>
+<h3 class="<%=(pwd.equals(spwd)&&(sun.equals(name)) ? "Green" : "Red")%>-text" >
+<%=(pwd.equals(spwd)&&(sun.equals(name)) ? "Success" : "Failure")%></h3>
 </body>  
 </html>  
