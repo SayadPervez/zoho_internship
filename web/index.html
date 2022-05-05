@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cookie Dropper 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<style>
+input{
+	text-align:center;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: teal;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: teal;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: teal;
+}
+</style>
+</head>
+<body style="width:90%;margin:0 auto;">
+	<h1 style="text-align:center;">Cookie Dropper 1</h1><br><br><br><br><br>
+	<form action="addCookie" method="post">
+		<div id="container" style="display:grid;grid-template-columns:10% 35% 10% 35% 10%">
+			<div class="empty"></div>
+			<div class="notempty">
+				<input type="text" name="key" placeholder="Key">
+			</div>
+			<div class="empty"></div>
+			<div class="notempty">
+				<input type="text" name="value" placeholder="Value">
+			</div>
+			<div class="empty"></div>
+		</div>
+		<br><br><br><br>
+		<input type="submit" class="btn-large" style="font-weight:bolder;display:block;margin-left:auto;margin-right:auto">
+	</form>
+</body>
+</html>

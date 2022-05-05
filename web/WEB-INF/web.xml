@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>chef</display-name>
+  <servlet>
+  	<servlet-name>cookie_maker</servlet-name>
+  	<servlet-class>chefpack.cookie_maker</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>cookie_maker</servlet-name>
+  	<url-pattern>/addCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>result</servlet-name>
+  	<servlet-class>chefpack.result</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>result</servlet-name>
+  	<url-pattern>/result</url-pattern>
+  </servlet-mapping>
+</web-app>
