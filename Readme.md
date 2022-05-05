@@ -10,7 +10,7 @@
 > 
 > Content Directory is **`web`**
 
-> JAVA SE-11
+> JAVA SE-8
 > 
 > TOMCAT v9.0
 > 
