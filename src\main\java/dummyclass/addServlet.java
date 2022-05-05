@@ -1,21 +1,23 @@
 package dummyclass;
 
-import java.io.PrintWriter;
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class addServlet extends HttpServlet
 {
-	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException
+	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException, ServletException
 	{
 		int a = Integer.parseInt(req.getParameter("num1"));
 		int b = Integer.parseInt(req.getParameter("num2"));
 		
-		PrintWriter out = res.getWriter();
+		RequestDispatcher rd = req.getRequestDispatcher("sq");
+		req.setAttribute("sum", a+b);
+		rd.forward(req, res);
 		
-		out.print("The total is "+(a+b));
 	}
 }
