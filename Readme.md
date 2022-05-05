@@ -1,6 +1,6 @@
 # Internship Day 2
 ### Servlet - Request Dispatcher
-#### Servlet based basic adder
+#### Servlet based basic adder , square
 
 > # **Note:**
 > 
