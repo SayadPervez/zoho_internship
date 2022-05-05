@@ -10,14 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class addServlet extends HttpServlet
 {
-	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException, ServletException
+	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException
 	{
 		int a = Integer.parseInt(req.getParameter("num1"));
 		int b = Integer.parseInt(req.getParameter("num2"));
-		
-		RequestDispatcher rd = req.getRequestDispatcher("sq");
-		req.setAttribute("sum", a+b);
-		rd.forward(req, res);
+		res.sendRedirect("sq?sum="+(a+b));
 		
 	}
 }

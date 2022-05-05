@@ -11,7 +11,7 @@ public class sqServlet extends HttpServlet
 {
 	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException
 	{
-		int a = (int) req.getAttribute("sum");
+		int a = Integer.parseInt( req.getParameter("sum") );
 		
 		PrintWriter out = res.getWriter();
 		
