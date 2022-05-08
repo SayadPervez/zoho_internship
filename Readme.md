@@ -20,6 +20,8 @@
 > **Create `struts.xml` file at the build path (`src\main\java`)**
 >
 > **Copy `struts-2.3.dtd` from `struts-2.3.37/src/core/src/main/resources` and paste the file at `Project/web/WEB-INF/dtds/struts-2.3.dtd`**
+>
+> **`<%@ taglib prefix="s" uri="/struts-tags" %>` is the taglib to be included in the JSP file**
 
 ### **`struts.xml` File Contents :**
 ```xml
@@ -78,7 +80,6 @@ public class classname {
   </filter-mapping>
 </web-app>
 ```
-
 
 ## **Version Management**
 
