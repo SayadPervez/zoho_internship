@@ -31,9 +31,9 @@
     
     <struts>
     	<package name="default" extends="struts-default">
-    		<action name="url" class="package.class">
-    			<result name="success">/successpage.jsp</result>
-    			<result name="error">/errorpage.jsp</result>
+    		<action name="url" class="packagename.classname">
+    			<result name="success">/success.jsp</result>
+    			<result name="error">/error.jsp</result>
     		</action>
     	</package>
     </struts>
@@ -78,12 +78,6 @@ public class classname {
   </filter-mapping>
 </web-app>
 ```
-
-
-
-
-
-
 
 
 ## **Version Management**
