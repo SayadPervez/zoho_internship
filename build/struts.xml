@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+    
+    <struts>
+    	<package strict-method-invocation="false" name="default" extends="tiles-default">
+		      <result-types>
+		         <result-type name = "tiles"
+		         class="org.apache.struts2.views.tiles.TilesResult" />
+		      </result-types>
+    		  <action name="">
+    			 <result type="tiles">heropage</result>
+    		  </action>
+    		  <action name="signuppage">
+    			 <result type="tiles">signuppage</result>
+    		  </action>
+    		  <action name="forgotpasswordpage">
+    			 <result type="tiles">fpp</result>
+    		  </action>
+    		  <action name="signup" class="actionPack.signupAction">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="login" class="actionPack.loginAction">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="sendotp" class="actionPack.sendOTP">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="*Login" class="actionPack.heroPageAction" method="{1}">
+    			 <result name="success" type="tiles">loginpage</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    	</package>
+    	
+    	<package strict-method-invocation="true" name="statics" extends="struts-default">
+		      <action name="heropagejs">
+    			 <result>heropagecomponents/statics/indexBrain.js</result>
+    		  </action>
+    		  <action name="heropagecss">
+    			 <result>heropagecomponents/statics/indexSkin.css</result>
+    		  </action>
+    		  <action name="loginpagejs">
+    			 <result>loginpagecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="loginpagecss">
+    			 <result>loginpagecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customer0pngicon">
+    			 <result>heropagecomponents/statics/customer.png</result>
+    		  </action>
+    		  <action name="ownerpngicon">
+    			 <result>heropagecomponents/statics/entrepreneur.png</result>
+    		  </action>
+			  <action name="forgotpngicon">
+    			 <result>forgotpagecomponents/statics/forgot.png</result>
+    		  </action>
+    		  <action name="bg0">
+    			 <result>statics/theater_img.jpg</result>
+    		  </action>
+    		  <action name="signuppagejs">
+    			 <result>signuppagecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="signuppagecss">
+    			 <result>signuppagecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="forgotpagejs">
+    			 <result>forgotpagecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="forgotpagecss">
+    			 <result>forgotpagecomponents/statics/skin.css</result>
+    		  </action>
+    	</package>
+    </struts>

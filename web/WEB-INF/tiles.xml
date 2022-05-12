@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+  
+<!DOCTYPE tiles-definitions PUBLIC   
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+ "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">   
+  
+<tiles-definitions>  
+     
+	<definition name="heropage" template="/layoutmanager.jsp">   
+		<put-attribute name="title" value="Theater Management App"/> 
+		<put-attribute name="headImports" value="/heropagecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/heropagecomponents/bodyImports.jsp"/>
+		<put-attribute name="body" value="/heropagecomponents/body.jsp"/> 
+	</definition>   
+	
+	<definition name="loginpage" template="/layoutmanager.jsp">   
+		<put-attribute name="title" value="Login Page"/> 
+		<put-attribute name="headImports" value="/loginpagecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/loginpagecomponents/bodyImports.jsp"/>
+		<put-attribute name="body" value="/loginpagecomponents/body.jsp"/> 
+	</definition>
+	
+	<definition name="signuppage" template="/layoutmanager.jsp">   
+		<put-attribute name="title" value="SignUp Page"/> 
+		<put-attribute name="headImports" value="/signuppagecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/signuppagecomponents/bodyImports.jsp"/>
+		<put-attribute name="body" value="/signuppagecomponents/body.jsp"/> 
+	</definition>
+     
+	<definition name="fpp" template="/layoutmanager.jsp">   
+		<put-attribute name="title" value="Forgot Password"/> 
+		<put-attribute name="headImports" value="/forgotpagecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/forgotpagecomponents/bodyImports.jsp"/>
+		<put-attribute name="body" value="/forgotpagecomponents/body.jsp"/> 
+	</definition>
+	
+</tiles-definitions>  
