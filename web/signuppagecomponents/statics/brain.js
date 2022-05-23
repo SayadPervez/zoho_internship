@@ -6,6 +6,9 @@ window.onload = function(e){
 
 $("#signup_button").click(function(e) {
     e.preventDefault();
+    $("#signup_button").text("Loading ...");
+	
+    
     $.ajax({
         type: "POST",
         url: "/MovieTicketsTiles/signup",
@@ -19,12 +22,14 @@ $("#signup_button").click(function(e) {
         success: function (result,textStatus,xhrreq) {
     		if(result==="success")
     		 {console.log("redirecting...");
-    		 window.location.href="commoncomponents/success.jsp";}
+    		 $("#signup_button").text("Sign Up");
+    		 window.location.href="/MovieTicketsTiles/homepage";}
     		 else
     		 {
-    		 console.log(result);}
+    		 console.log(result);$("#signup_button").text("Sign Up");
+    		 }
 		},
-        error: function(result) {
+        error: function(result) {$("#signup_button").text("Sign Up");
             window.location.href="commoncomponents/error.jsp";
         }
     });

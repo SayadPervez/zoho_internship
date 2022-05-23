@@ -16,7 +16,7 @@ window.onload = function(e){
 $("#login_button").click(function(e) {
     e.preventDefault();
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "login",
         data: { 
             type : type,
@@ -26,7 +26,7 @@ $("#login_button").click(function(e) {
         success: function (result,textStatus,xhrreq) {
     		if(result==="success")
     		 {console.log("redirecting...");
-    		 window.location.href="commoncomponents/success.jsp";}
+    		 window.location.href="/MovieTicketsTiles/homepage";}
     		 else
     		 {
     		 window.location.href="commoncomponents/error.jsp";}

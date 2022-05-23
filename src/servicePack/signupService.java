@@ -19,21 +19,14 @@ public Boolean signup(String __uname, String __password,String __type,String __a
 		Class.forName("com.mysql.cj.jdbc.Driver");	
 		Connection con = DriverManager.getConnection(urlMYSQL,usernameMYSQL,passwordMYSQL);
 		
-		Statement st2 = con.createStatement();
-		int rs2 = st2.executeUpdate("INSERT INTO lookup_creds (username,emailid,usertype) VALUES(\""+__uname+"\",\""+__emailid+"\",\""+__type+"\")");
-		
 		Statement st = con.createStatement();
-		int rs = st.executeUpdate("INSERT INTO "+__type+"_creds (username,emailid,age,password) VALUES(\""+__uname+"\",\""+__emailid+"\","+__age+",\""+__password+"\")");
-		
-		
-		
+		int rs = st.executeUpdate("INSERT INTO creds (username,emailid,age,password,type) VALUES(\""+__uname+"\",\""+__emailid+"\","+__age+",\""+__password+"\",\""+__type+"\")");
 		
 		st.close();
-		st2.close();
 		con.close();
 		
 		System.out.println("NO ERRORS in jdbc signup");
-		if(rs==1&&rs2==1)
+		if(rs==1)
 			return(true);
 		else
 			return(false);

@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+html{
+	overflow: hidden !important;
+}
+
+.myflatbutton{
+	text-align:center;
+	cursor:pointer;
+	transition: all 0.4s ease-in-out !important;
+}
+
+.myflatbutton:hover{
+	background-color:#212121;
+	color:#f0f0f0ef;
+	border-radius:79px 29px 29px 79px;
+}
+
+body{
+	background-image: url("/MovieTicketsTiles/bg0");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+	padding:0 !important;
+	margin:0 !important;
+	overflow-y:none !important;
+}
+
+.tabs{
+	height:85vh !important;
+	border-left:2px solid black;
+	margin:0;
+}
+
+#mainContainer{
+	padding:0;
+	margin:0;
+}
+
+.circle{
+	display: block;
+	margin:2rem auto;
+	margin-bottom: 1rem;
+	width:12rem;
+	height:12rem;
+	background-image:url("/MovieTicketsTiles/ownerpngicon");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-size: 80%;
+}
+
+#sidetab{
+	padding:0;
+	background-color: #f0f0f0ef;
+	height:100vh !important;
+	position: sticky;
+	left:0;top: 0 !important;;
+	overflow-y:hidden;
+}
+
+#maintab{
+	background-color: #212121c3;
+	padding:2rem;
+}
+
+#sidenav{
+	margin:3rem 0;
+	padding:0;
+}
+
+#sidenav button{
+	display: block;
+	text-align: left;
+	font-weight: 600;
+	font-size: 1.1rem;
+	margin:0;
+	width:100%;
+	padding:1.1rem 1.37rem;
+	background-color: transparent;Materialize Select
+	border:none;
+	transition: all 0.3s ease-in;
+}
+
+#logout:hover{
+	padding:1.4rem 3.37rem;
+	background-color: #d50000 !important;
+	color:#f0f0f0;
+}
+
+#sidenav button:hover{
+	padding:1.4rem 3.37rem;
+	background-color: #3b3b3b;
+	color:#f0f0f0;
+}
+
+.activeclass{
+	padding:1.4rem 3.37rem !important;
+	background-color: #3b3b3b !important;
+	color:#f0f0f0 !important;
+}
+
+.offset{
+	position: relative;
+	top:6px;
+}
+
+table{
+	font-size:1.37rem;
+}
+
+table .material-icons{
+	cursor:pointer;
+	margin:0 5px;
+}
+
+table .delete:hover{
+	color:red;
+}
+
+table .setup:hover{
+	color:orange;
+}
+
+table .seatlayout:hover{
+	color:blue !important;
+}
+
+#sub-cont{
+	background-color:#f0f0f0ef;
+	width:100%;
+	height:max-content;
+	border:0px solid transparent;
+	border-radius:8px;
+	padding:3.7rem 6.4rem;
+}
+
+#sub-cont h4{
+	margin:0;
+}
+
+.btn-large{
+	margin-left: 2.5rem;
+	transition: all .2s ease-in-out !important;
+}
+
+.btn-large:hover{
+	padding-right:2.2rem;
+	padding-left:2.2rem;
+}
+
+h6{
+	display:iniline;
+	font-weight:bold!important;
+}
+
+input{
+	width:30rem !important;
+	text-align:center !important;
+}
+
+tr{
+	font-weight:bold;
+}
+
+.badge{
+	background-color:#212121 ;
+	color:#fff !important;
+	font-weight:bold;
+	border-radius:5px;
+}
+
+.dummy{
+	display:none !important;
+}
+
+.modal button{
+	margin:1.2rem !important;
+}
+
+.modalbutton#closemodalbutton{
+	font-weight:bold !important;
+transition: all .2s ease-in-out !important;
+}
+
+.modalbutton#submitbutton{
+	font-weight:bold !important;
+transition: all .2s ease-in-out !important;
+}
+
+.modalbutton#closemodalbutton:hover{
+	background-color:#f44336;
+	font-weight:bold !important;
+	color:white !important;
+}
+
+.modalbutton#submitbutton:hover{
+	padding-right:1.2rem;
+	padding-left:1.2rem;
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #212121; /* no need for !important :) */
+    font-weight:bold;
+}
+
+button{
+	border:none;
+}
+
+input{
+	width:100% !important;
+}
+
+#inputdiv2{
+	display:none;
+}
+
+input[type="date"]{
+	display:block;
+}
+
+  /* label color */
+   label {
+     color: #000 !important;
+   }
+   /* label focus color */
+   input:focus + label {
+     color: #000 !important;
+   }
+   /* label underline focus color */
+   input:focus {
+     border-bottom: 1px solid #000 !important;
+     box-shadow: 0 1px 0 0 #000 !important;
+   }
+   /* valid color */
+   input.valid {
+     border-bottom: 1px solid #000 !important;
+     box-shadow: 0 1px 0 0 #000 !important;
+   }
+   /* invalid color */
+   input.invalid {
+     border-bottom: 1px solid #000 !important;
+     box-shadow: 0 1px 0 0 #000 !important;
+   }
+   /* icon prefix focus color */
+   .prefix.active {
+     color: #000 !important;
+   }
+   input:disabled{
+   ;
+   }
+   
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

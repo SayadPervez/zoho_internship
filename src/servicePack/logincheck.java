@@ -18,7 +18,7 @@ public class logincheck {
 		Connection con = DriverManager.getConnection(urlMYSQL,usernameMYSQL,passwordMYSQL);
 		
 		Statement st = con.createStatement();
-		ResultSet rs = st.executeQuery("Select * FROM "+__type+"_creds WHERE username=\""+__uname+"\"");
+		ResultSet rs = st.executeQuery("Select * FROM creds WHERE username=\""+__uname+"\" OR emailid=\""+__uname+"\"");
 		
 		rs.next();
 			String username = rs.getString("username");

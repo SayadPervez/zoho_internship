@@ -34,4 +34,87 @@
 		<put-attribute name="body" value="/forgotpagecomponents/body.jsp"/> 
 	</definition>
 	
+	<definition name="resetpwd" template="/layoutmanager.jsp">   
+		<put-attribute name="title" value="Reset Password"/> 
+		<put-attribute name="headImports" value="/resetpwdcomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/resetpwdcomponents/bodyImports.jsp"/>
+		<put-attribute name="body" value="/resetpwdcomponents/body.jsp"/> 
+	</definition>
+	
+	<definition name="ownerprofilehome" template="/ownerlayout.jsp">   
+		<put-attribute name="title" value="Home"/> 
+		<put-attribute name="headImports" value="/ownerhomecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/ownerhomecomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/ownerhomecomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/ownerhomecomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="ownershows" template="/ownerlayout.jsp">   
+		<put-attribute name="title" value="Shows"/> 
+		<put-attribute name="headImports" value="/ownershowscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/ownershowscomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/ownershowscomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/ownershowscomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="ownertheaters" template="/ownerlayout.jsp">   
+		<put-attribute name="title" value="Theaters"/> 
+		<put-attribute name="headImports" value="/ownertheaterscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/ownertheaterscomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/ownertheaterscomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/ownertheaterscomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="ownerwallet" template="/ownerlayout.jsp">   
+		<put-attribute name="title" value="Wallet"/> 
+		<put-attribute name="headImports" value="/ownerwalletcomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/ownerwalletcomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/ownerwalletcomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/ownerwalletcomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="ownerseating" template="/seatinglayout.jsp">   
+		<put-attribute name="title" value="Layout"/> 
+		<put-attribute name="headImports" value="/ownerseatscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/ownerseatscomponents/bodyImports.jsp"/>
+		<put-attribute name="maintab" value="/ownerseatscomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customerseating" template="/seatinglayout.jsp">   
+		<put-attribute name="title" value="Layout"/> 
+		<put-attribute name="headImports" value="/customerseatscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerseatscomponents/bodyImports.jsp"/>
+		<put-attribute name="maintab" value="/customerseatscomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customerprofile" template="/customerlayout.jsp">   
+		<put-attribute name="title" value="Profile"/>
+		<put-attribute name="headImports" value="/customerprofilecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerprofilecomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/customerprofilecomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/customerprofilecomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customertickets" template="/customerlayout.jsp">   
+		<put-attribute name="title" value="Book Tickets"/>
+		<put-attribute name="headImports" value="/customerticketscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerticketscomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/customerticketscomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/customerticketscomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customerschedule" template="/customerlayout.jsp">   
+		<put-attribute name="title" value="Schedule"/>
+		<put-attribute name="headImports" value="/customerschedulecomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerschedulecomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/customerschedulecomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/customerschedulecomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customerhistory" template="/customerlayout.jsp">   
+		<put-attribute name="title" value="Book Tickets"/>
+		<put-attribute name="headImports" value="/customerhistorycomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerhistorycomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/customerhistorycomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/customerhistorycomponents/maintab.jsp"/> 
+	</definition>
+	<definition name="customerwallet" template="/customerlayout.jsp">   
+		<put-attribute name="title" value="Book Tickets"/>
+		<put-attribute name="headImports" value="/customerwalletcomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/customerwalletcomponents/bodyImports.jsp"/>
+		<put-attribute name="sidetab" value="/customerwalletcomponents/sidetab.jsp"/>
+		<put-attribute name="maintab" value="/customerwalletcomponents/maintab.jsp"/> 
+	</definition>
+	
 </tiles-definitions>  

@@ -9,7 +9,7 @@
 
 		<div class="sub">
 			<h3 class="center-align">Forgot Password</h3><br>
-			<div class="input-field">
+			<div class="input-field" id="emaildiv">
 				<input id="emailid_forgot" type="text">
 				<label for="emailid" class="input_label">Email id</label>
 			  </div>

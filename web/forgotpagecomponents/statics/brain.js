@@ -9,6 +9,7 @@ if(flag==false)
 {
 	flag=true;
 	$("#forgot_button").text("Submit OTP");
+	$("#emaildiv").css("display","none");
 }
 }
 
@@ -41,5 +42,39 @@ $("#forgot_button").click(function(e) {
 	}
 	else{
 		console.log("already otp is sent");
+		
+		
+		
+		$.ajax({
+			        type: "GET",
+			        url: "validateotp",
+			        data: { 
+			            emailid : document.getElementById("emailid_forgot").value,
+			            otp : document.getElementById("otp_forgot").value
+			        },
+			        success: function (result,textStatus,xhrreq) {
+			    		if(result==="success")
+			    		 {
+			    		 	window.location.href="/MovieTicketsTiles/resetpasswordpage";
+							}
+			    		 else
+			    		 {
+			    		 window.location.href="commoncomponents/error.jsp";
+			    		 }
+					},
+			        error: function(result) {
+			            alert('error');
+			        }
+			    });
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 });

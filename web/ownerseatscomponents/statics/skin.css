@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+html{
+	margin:0;padding:0;
+}
+
+body{
+	background-image: url("/MovieTicketsTiles/bg0");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.btn-large{
+	font-weight: 600;
+	transition: all 0.3s ease-in-out !important;
+}
+
+.btn-large:hover{
+	padding-right:2.3rem;
+	padding-left:2.3rem;
+}
+
+#modebadge{
+	position: fixed;
+	top:1.44rem;
+	left:1.4rem;
+	z-index:999;
+	border-radius: 5px;
+	background-color: #e2e2e2ec;
+	font-weight: 500;
+	color:black;
+}
+
+.tabs{
+	min-height:85vh !important;
+	border-left:2px solid black;
+	margin:0;
+}
+
+#mainContainer{
+	padding:0;
+	margin:0;
+}
+
+#maintab{
+	background-color: #e2e2e2ec;
+}
+
+.seats{
+	color:rgb(56, 56, 56);
+	font-size:2.5rem;
+	cursor:pointer;
+}
+
+.seats:hover{
+	color:rgb(255, 60, 0);
+}
+
+#seat-container{
+	width: fit-content;
+	margin:2rem auto;
+}
+
+.rowx{
+	text-align: left;
+	font-size:2.5rem;
+	display: inline-block;
+}
+
+.seatnumbers{
+	display: inline-block;
+	font-size:20px;
+	font-weight: 600;
+	text-align: center;
+	width:37.5px !important;
+	height:37.5px !important;
+}
+
+.seatletters{
+	display: inline-block;
+	font-size:20px;
+	font-weight: 600;
+	text-align: center;
+	width:37.5px !important;
+	height:37.5px !important;
+	position:relative;
+	bottom:0.3rem;
+}
+
+.offset{
+	position:relative;
+	top:0.4rem;
+	right:0.5rem;
+}
+
+.offsetoverride{
+	right:0;
+}
+
+#setbutton{
+	position:fixed;
+	right:2.4rem;
+	bottom:10.5rem;
+	z-index: 9999;	
+}
+
+#resetbutton{
+	position:fixed;
+	right:17.4rem;
+	bottom:10.5rem;
+	z-index: 9999;
+}
+
+#modefabdiv{
+	z-index: 999;
+	position:fixed;
+	right:2.4rem;
+	bottom:15.9rem;
+}
+
+#inputdiv{
+	width:50%;
+	margin:5rem auto;	
+}
+
+.input-field input[type=text]:focus + label {
+	color: #000 !important;
+}
+/* label underline focus color */
+  .input-field input[type=text]:focus {
+	border-bottom: 1px solid #000 !important;
+	box-shadow: 0 1px 0 0 #000 !important;
+  }
+
+  .input-field input[type=number]:focus + label {
+	color: #000 !important;
+}
+/* label underline focus color */
+  .input-field input[type=number]:focus {
+	border-bottom: 1px solid #000 !important;
+	box-shadow: 0 1px 0 0 #000 !important;
+  }
+  
+  input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

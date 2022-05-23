@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+html{
+	overflow: hidden !important;
+}
+
+body{
+	background-image: url("/MovieTicketsTiles/bg0");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+	padding:0 !important;
+	margin:0 !important;
+	overflow-y:none !important;
+}
+
+.tabs{
+	height:85vh !important;
+	border-left:2px solid black;
+	margin:0;
+}
+
+#mainContainer{
+	padding:0;
+	margin:0;
+}
+
+.circle{
+	display: block;
+	margin:2rem auto;
+	margin-bottom: 1rem;
+	width:12rem;
+	height:12rem;
+	background-image:url("/MovieTicketsTiles/customer0pngicon");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-size: 80%;
+}
+
+#sidetab{
+	padding:0;
+	background-color: #f0f0f0ef;
+	height:100vh !important;
+	position: sticky;
+	left:0;top: 0 !important;;
+	overflow-y:hidden;
+}
+
+#maintab{
+	background-color: #212121ad;
+}
+
+#sidenav{
+	margin:3rem 0;
+	padding:0;
+}
+
+#sidenav button{
+	display: block;
+	text-align: left;
+	font-weight: 600;
+	font-size: 1.1rem;
+	margin:0;
+	width:100%;
+	padding:1.1rem 1.37rem;
+	background-color: transparent;
+	border:none;
+	transition: all 0.3s ease-in;
+}
+
+#logout:hover{
+	padding:1.4rem 3.37rem;
+	background-color: #d50000 !important;
+	color:#f0f0f0;
+}
+
+#sidenav button:hover{
+	padding:1.4rem 3.37rem;
+	background-color: #3b3b3b;
+	color:#f0f0f0;
+}
+
+.activeclass{
+	padding:1.4rem 3.37rem !important;
+	background-color: #3b3b3b !important;
+	color:#f0f0f0 !important;
+}
+
+.material-icons{
+	position: relative;
+	top:6px;
+}

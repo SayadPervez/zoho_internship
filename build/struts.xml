@@ -19,6 +19,130 @@
     		  <action name="forgotpasswordpage">
     			 <result type="tiles">fpp</result>
     		  </action>
+    		  <action name="resetpasswordpage">
+    			 <result type="tiles">resetpwd</result>
+    		  </action>
+    		  <action name="ownerprofilepage" class="actionPack.isLoggedin">
+    			 <result name="success" type="redirect">/ownerprofileinfo</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="getmytheaterslist" class="actionPack.getMyTheatersList">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="addshowsapi" class="actionPack.addShows">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="viewmyshowsapi" class="actionPack.getMyShowsOwner">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="viewallshowsapi" class="actionPack.getAllShows">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerprofilepage" class="actionPack.isLoggedin">
+    			 <result name="success" type="redirect">/ownerprofileinfo</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="finalizeTicket" class="actionPack.finalizeTicket">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="applychanges" class="actionPack.updateUserDetails">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="deletemyshowsownerapi" class="actionPack.deleteShows">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="saveseatlayout" class="actionPack.saveseatlayout">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="ownerprofileinfo" class="actionPack.ownerinfoservice">
+    			 <result name="success" type="tiles">ownerprofilehome</result>
+    			 <result name="successcustomer" type="tiles">customerprofile</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="ownershowspage" class="actionPack.isLoggedin">
+    			 <result name="success" type="tiles">ownershows</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="ownertheaterspage" class="actionPack.theatersPageAction">
+    			 <result name="success" type="tiles">ownertheaters</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="ownerwalletpage" class="actionPack.userWalletAction">
+    		  	 <result name="success" type="tiles">ownerwallet</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerprofilepage" class="actionPack.isLoggedin">
+    			 <result name="success" type="tiles">customerprofile</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="addTheaters" class="actionPack.addTheatersAction">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="editTheaters" class="actionPack.editTheatersAction">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="ownerSeats" class="actionPack.setSeatingAction">
+    			 <result name="success" type="tiles">ownerseating</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerSeats" class="actionPack.bookMySeats">
+    			 <result name="success" type="tiles">customerseating</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="deleteTheater" class="actionPack.deleteTheater">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="getTimeslotString" class="actionPack.getTimeslotString">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="editwallet" class="actionPack.updatewallet">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="customerticketspage" class="actionPack.isLoggedin">
+    			 <result name="success" type="tiles">customertickets</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerschedulepage" class="actionPack.isLoggedin">
+    			 <result name="success" type="tiles">customerschedule</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerhistorypage" class="actionPack.isLoggedin">
+    			 <result name="success" type="tiles">customerhistory</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="customerwalletpage" class="actionPack.userWalletAction">
+    			 <result name="success" type="tiles">customerwallet</result>
+    			 <result name="error" type="tiles">loginpage</result>
+    		  </action>
+    		  <action name="sessiondebug">
+    			 <result>commoncomponents/listsessions.jsp</result>
+    		  </action>
     		  <action name="signup" class="actionPack.signupAction">
     			 <result name="success">commoncomponents/success.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>
@@ -27,7 +151,32 @@
     			 <result name="success">commoncomponents/success.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>
     		  </action>
+    		  <action name="homepage" class="actionPack.usertypeAction">
+    			 <result name="owner"  type="redirect">/ownerprofileinfo</result>
+    			 <result name="customer" type="redirect">/ownerprofileinfo</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="logout" class="actionPack.logoutAction">
+    			 <result name="success" type="tiles">loginpage</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
     		  <action name="sendotp" class="actionPack.sendOTP">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="validateotp" class="servicePack.otpValidate">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="isloggedin" class="actionPack.isLoggedin">
+    			 <result name="success">commoncomponents/success.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="changepassword" class="actionPack.changePassword">
+    		  	<result name="success" type="tiles">resetpwd</result>
+    		  	<result name="error">commoncomponents/error.jsp</result>
+    		  </action>
+    		  <action name="resetpwd" class="actionPack.resetpwdAction">
     			 <result name="success">commoncomponents/success.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>
     		  </action>
@@ -62,6 +211,9 @@
     		  <action name="bg0">
     			 <result>statics/theater_img.jpg</result>
     		  </action>
+    		  <action name="pwdreseticon">
+    			 <result>statics/reset.png</result>
+    		  </action>
     		  <action name="signuppagejs">
     			 <result>signuppagecomponents/statics/brain.js</result>
     		  </action>
@@ -73,6 +225,78 @@
     		  </action>
     		  <action name="forgotpagecss">
     			 <result>forgotpagecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="resetpagejs">
+    			 <result>resetpwdcomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="resetpagecss">
+    			 <result>resetpwdcomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="ownerprofilepagejs">
+    			 <result>ownerhomecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="ownerprofilepagecss">
+    			 <result>ownerhomecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="ownershowspagejs">
+    			 <result>ownershowscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="ownershowspagecss">
+    			 <result>ownershowscomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="ownerseatspagejs">
+    			 <result>ownerseatscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="ownerseatspagecss">
+    			 <result>ownerseatscomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="ownertheaterspagejs">
+    			 <result>ownertheaterscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="ownertheaterspagecss">
+    			 <result>ownertheaterscomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="ownerwalletpagejs">
+    			 <result>ownerwalletcomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="ownerwalletpagecss">
+    			 <result>ownerwalletcomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerprofilepagejs">
+    			 <result>customerprofilecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerprofilepagecss">
+    			 <result>customerprofilecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerticketspagejs">
+    			 <result>customerticketscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerticketspagecss">
+    			 <result>customerticketscomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerschedulepagejs">
+    			 <result>customerschedulecomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerschedulepagecss">
+    			 <result>customerschedulecomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerhistorypagejs">
+    			 <result>customerhistorycomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerhistorypagecss">
+    			 <result>customerhistorycomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerwalletpagejs">
+    			 <result>customerwalletcomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerwalletpagecss">
+    			 <result>customerwalletcomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="customerseatspagejs">
+    			 <result>customerseatscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="customerseatspagecss">
+    			 <result>customerseatscomponents/statics/skin.css</result>
     		  </action>
     	</package>
     </struts>

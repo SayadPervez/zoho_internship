@@ -3,7 +3,12 @@ package actionPack;
 import servicePack.signupService;
 import servicePack.mailer;
 
-public class signupAction {
+import java.util.Map;  
+
+import org.apache.struts2.dispatcher.SessionMap;  
+import org.apache.struts2.interceptor.SessionAware; 
+
+public class signupAction implements SessionAware{
 	
 	private String type;
 	private String uname;
@@ -11,6 +16,8 @@ public class signupAction {
 	private String emailid;
 	private String age;
 	private String problem;
+	
+	private SessionMap<String,Object> sessionMap; 
 	
 	public String execute() throws Exception
 	{
@@ -22,7 +29,12 @@ public class signupAction {
 			mailer m = new mailer();
 			String status_ = m.sendEmail(emailid,"TMS Sign Up NOtification","<h3>THEATER MANAGEMENT APP</h3><br><div>You registered as a <strong style=\"color:red;\">"+getType()+"</strong> in our app under the following credentials : <br><ul><li>Username : "+getUname()+"<li>Email ID : "+getEmailid()+"<li>Password : "+getPwd()+"<li>Age : "+getAge()+"</ul></div>",true);
 			if(status_.equals("success"))
+			{
+				sessionMap.put("logged-in", "true");
+				sessionMap.put("user-type", type);
+				sessionMap.put("user-name",uname);
 				return("success");
+			}
 			else
 			{
 				setProblem("mail error");
@@ -83,5 +95,10 @@ public class signupAction {
 	public void setProblem(String problem) {
 		this.problem = problem;
 	}
+	
+	@Override  
+	public void setSession(Map<String, Object> map) {  
+	    sessionMap=(SessionMap)map;  
+	} 
 
 }

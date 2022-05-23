@@ -3,10 +3,17 @@ package actionPack;
 import servicePack.mailer;
 import java.lang.Math;   
 
-public class sendOTP {
+import java.util.Map;  
+
+import org.apache.struts2.dispatcher.SessionMap;  
+import org.apache.struts2.interceptor.SessionAware; 
+
+public class sendOTP  implements SessionAware{
 	
 	private String emailid;
 	private String otp;
+	
+	private SessionMap<String,Object> sessionMap;
 	
 	private String randRange(int min,int max)
 	{
@@ -15,7 +22,9 @@ public class sendOTP {
 	
 	public String execute() {
 		mailer m = new mailer();
-		m.sendEmail(emailid, "TMS Password Reset OTP", "<h3>THEATER MANAGEMENT SYSTEM</h3><br>Your password reset OTP is <strong style=\"color:red;\">"+randRange(1000,9999)+"</strong>", true);
+		String randx = randRange(10000,99999);
+		sessionMap.put(getEmailid()+"otp",randx);
+		m.sendEmail(emailid, "TMS Password Reset OTP", "<h3>THEATER MANAGEMENT SYSTEM</h3><br>Your password reset OTP is <br><h1><strong style=\"color:red;\">"+randx+"</strong></h1>", true);
 		return("success");
 	}
 
@@ -37,5 +46,10 @@ public class sendOTP {
 
 	public void setOtp(String otp) {
 		this.otp = otp;
+	}
+
+	@Override  
+	public void setSession(Map<String, Object> map) {  
+	    sessionMap=(SessionMap)map;  
 	}
 }
