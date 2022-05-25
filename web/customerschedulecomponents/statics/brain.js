@@ -4,8 +4,11 @@ var selected_showid = null;
 
 var validateNumber = 0;
 
+var todayDate = null;
+
 $(document).ready(function(){
     $('.modal').modal();
+    todayDate = new Date().toJSON().slice(0,10);
     $('select').formSelect();
     
     $.ajax({
@@ -18,7 +21,11 @@ $(document).ready(function(){
 	        	result.forEach((item)=>{
 	        		temp = JSON.parse(item.replace(/&quot;/g,'"'));
 	    			console.log("temp : ", temp);
-	    			allshowsjsonlist.push(JSON.parse(JSON.stringify(temp)))
+	    			x = new Date(temp.date).toJSON().slice(0,10)
+	    			console.log("x: ",x);
+	    			console.log("Current Date : " , todayDate);
+	    			if(x>todayDate)
+	    				allshowsjsonlist.push(JSON.parse(JSON.stringify(temp)));
 	        	});
 	    		
 	    		console.log("allshowsjsonlist : ",allshowsjsonlist);
