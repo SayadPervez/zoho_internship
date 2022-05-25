@@ -127,7 +127,7 @@ function paybutton()
 			    },
 			    success: function (result,textStatus,xhrreq) {
 					if(result==="success")
-					 {alert("success");location.reload();}
+					 {alert("success");window.location.href=`/MovieTicketsTiles/customerschedulepage`;}
 					 else
 					 {
 					 alert(result)

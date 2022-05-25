@@ -7,9 +7,12 @@ import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 import org.json.JSONObject; 
 import java.sql.*;
+
+import servicePack.mailer;
 import servicePack.makeTransaction;
 
 import dbassistPack.UID;
+import dbassistPack.getEmailID;
 
 public class cancelShows implements SessionAware{
 	private SessionMap<String,Object> sessionMap;
@@ -112,6 +115,9 @@ public class cancelShows implements SessionAware{
 			con.close();
 			
 			setMessage("Refund amount processed !!  "+Amount);
+			mailer m = new mailer();
+			getEmailID ge = new getEmailID();
+			m.sendEmail(ge.fetchEmailID((String) sessionMap.get("user-name")), "TICKET Cancelled", "<h1>Tickets Confirmed</h1><br>Amount refunded :<strong style=\"color:red;\">"+Amount+"</strong>", true);
 			return("message");
 		}
 		else {

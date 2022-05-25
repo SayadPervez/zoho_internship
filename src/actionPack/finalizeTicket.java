@@ -8,6 +8,9 @@ import org.json.JSONObject;
 import java.sql.*;
 import servicePack.makeTransaction;
 
+import servicePack.mailer;
+import dbassistPack.getEmailID;
+
 import dbassistPack.UID;
 
 public class finalizeTicket implements SessionAware{
@@ -84,7 +87,12 @@ public class finalizeTicket implements SessionAware{
 			System.out.println("uidCustomer = "+uidCustomer);
 			makeTransaction mt = new makeTransaction();
 			if(mt.commit(uidCustomer, uidOwner, Amount))
+				{
+				mailer m = new mailer();
+				getEmailID ge = new getEmailID();
+				m.sendEmail(ge.fetchEmailID((String) sessionMap.get("user-name")), "TICKET CONFIRMATION", "<h1>Tickets Confirmed</h1><br>Your Seats are :<span color=\"red\">"+myseats+"</span>", true);
 				return("success");
+				}
 			else
 			{
 				return("error");
