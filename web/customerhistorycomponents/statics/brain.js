@@ -6,6 +6,17 @@ var validateNumber = 0;
 
 var todayDate = null;
 
+function sortByProperty(property){  
+   return function(a,b){  
+      if(a[property] > b[property])  
+         return 1;  
+      else if(a[property] < b[property])  
+         return -1;  
+  
+      return 0;  
+   }  
+}
+
 $(document).ready(function(){
     $('.modal').modal();
     $('select').formSelect();
@@ -25,6 +36,7 @@ $(document).ready(function(){
 	    			console.log("Current Date : " , todayDate);
 	    			if(x<todayDate)
 	    				allshowsjsonlist.push(JSON.parse(JSON.stringify(temp)));
+	    			allshowsjsonlist.sort(sortByProperty("date"));
 	        	});
 	    		
 	    		console.log("allshowsjsonlist : ",allshowsjsonlist);

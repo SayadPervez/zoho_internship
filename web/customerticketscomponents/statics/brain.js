@@ -4,6 +4,21 @@ var selected_showid = null;
 
 var validateNumber = 0;
 
+var todayDate = null;
+
+todayDate = new Date().toJSON().slice(0,10);
+
+function sortByProperty(property){  
+   return function(a,b){  
+      if(a[property] > b[property])  
+         return 1;  
+      else if(a[property] < b[property])  
+         return -1;  
+  
+      return 0;  
+   }  
+}
+
 $(document).ready(function(){
     $('.modal').modal();
     $('select').formSelect();
@@ -18,7 +33,13 @@ $(document).ready(function(){
 	    		Object.keys(temp).forEach((val,ind)=>{
 	    			temp2  = JSON.parse(temp[val]);
 	    			temp2.seats = JSON.parse(temp2.seats);
-	    			allshowsjsonlist.push(JSON.parse(JSON.stringify(temp2)));
+	    			console.log(temp2);
+	    			x = new Date(temp2.date).toJSON().slice(0,10)
+	    			console.log("x: ",x);
+	    			console.log("Current Date : " , todayDate);
+	    			if(x>=todayDate)
+	    				allshowsjsonlist.push(JSON.parse(JSON.stringify(temp2)));
+	    			allshowsjsonlist.sort(sortByProperty("date"));
 	    		});
 	    		console.log(allshowsjsonlist);
 	    		allshowsjsonlist.forEach((item)=>{

@@ -20,7 +20,7 @@ public class finalizeTicket implements SessionAware{
 	private String myseats;
 	private String totalcost;
 	
-	public String execute() throws Exception
+	public synchronized String execute() throws Exception
 	{
 		if(
 				((String) sessionMap.get("logged-in")).equals("true")
