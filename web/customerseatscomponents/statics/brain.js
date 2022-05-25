@@ -127,7 +127,7 @@ function paybutton()
 			    },
 			    success: function (result,textStatus,xhrreq) {
 					if(result==="success")
-					 {alert("success")}
+					 {alert("success");location.reload();}
 					 else
 					 {
 					 alert(result)
@@ -140,6 +140,7 @@ function paybutton()
 	}
 	else{
 		alert("Insufficient Funds");
+		window.location.href = '/MovieTicketsTiles/customerwalletpage';
 	}
 }
 

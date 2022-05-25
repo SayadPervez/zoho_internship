@@ -30,6 +30,16 @@
     			 <result name="message">commoncomponents/message.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>
     		  </action>
+    		  <action name="myShowsAPI" class="actionPack.myShows">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>    	
+    		  <action name="cancelShows" class="actionPack.cancelShows">
+    			 <result name="message">commoncomponents/message.jsp</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>  	  
     		  <action name="addshowsapi" class="actionPack.addShows">
     			 <result name="success">commoncomponents/success.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>

@@ -29,6 +29,9 @@ public class finalizeTicket implements SessionAware{
 			System.out.println(totalcost);
 			int Amount = Integer.parseInt(totalcost); 
 			
+			UID uid = new UID();
+			int uidCustomer = uid.getUID((String) sessionMap.get("user-name"));
+			
 			String ipAddressMYSQL = "127.0.0.1";
 			String portMYSQL = "3306";
 			String databaseName = "tms";
@@ -50,7 +53,7 @@ public class finalizeTicket implements SessionAware{
 			int uidOwner = rs.getInt("userid");
 			
 			Statement st1 = con.createStatement();
-			int rs1 = st1.executeUpdate("INSERT INTO bookings (userid,showid,myseats) VALUES(\'"+uidOwner+"\',\'"+sid.replace('$', '|')+"\',\'"+myseats+"\')");
+			int rs1 = st1.executeUpdate("INSERT INTO bookings (userid,showid,myseats,cost) VALUES(\'"+uidCustomer+"\',\'"+sid.replace('$', '|')+"\',\'"+myseats+"\',"+Amount+")");
 			
 			Statement st12 = con.createStatement();
 			ResultSet rs12 = st12.executeQuery("Select * from shows where showid=\'"+sid.replace('$', '|')+"\'");
@@ -77,8 +80,7 @@ public class finalizeTicket implements SessionAware{
 			
 			System.out.println("Amount = "+Amount);
 			System.out.println("uidOwner = "+uidOwner);
-			UID uid = new UID();
-			int uidCustomer = uid.getUID((String) sessionMap.get("user-name"));
+			
 			System.out.println("uidCustomer = "+uidCustomer);
 			makeTransaction mt = new makeTransaction();
 			if(mt.commit(uidCustomer, uidOwner, Amount))
