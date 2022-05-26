@@ -75,6 +75,12 @@
 		<put-attribute name="bodyImports" value="/ownerseatscomponents/bodyImports.jsp"/>
 		<put-attribute name="maintab" value="/ownerseatscomponents/maintab.jsp"/> 
 	</definition>
+	<definition name="statsseating" template="/seatinglayout.jsp">   
+		<put-attribute name="title" value="Layout"/> 
+		<put-attribute name="headImports" value="/statsseatscomponents/headImports.jsp"/>
+		<put-attribute name="bodyImports" value="/statsseatscomponents/bodyImports.jsp"/>
+		<put-attribute name="maintab" value="/statsseatscomponents/maintab.jsp"/> 
+	</definition>
 	<definition name="customerseating" template="/seatinglayout.jsp">   
 		<put-attribute name="title" value="Layout"/> 
 		<put-attribute name="headImports" value="/customerseatscomponents/headImports.jsp"/>

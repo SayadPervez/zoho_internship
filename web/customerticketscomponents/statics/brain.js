@@ -47,7 +47,7 @@ $(document).ready(function(){
 				    });
 			},
 	        error: function(result) {
-	            alert('AJAX Erred');
+	            toaster("AJAX Erred","white red-text text-accent-4");
 	        }
 	    });
     

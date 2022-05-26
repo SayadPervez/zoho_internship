@@ -166,13 +166,13 @@ function setbutton(){
         },
         success: function (result,textStatus,xhrreq) {
     		if(result==="success")
-    		 {alert("success")}
+    		 {toaster("Seat Layout Saved","white green-text text-accent-4");}
     		 else
     		 {
-    		 alert(result)}
+                toaster("Seat Layout Updation Failed","white red-text text-accent-4");}
 		},
         error: function(result) {
-            alert('AJAX error');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });
 }
@@ -192,9 +192,9 @@ function popseats()
 function populateSeats(rows,cols)
 {
     if(cols<1 || cols>50)
-        {alert("Invalid number of columns");return("")}
+        {toaster("Invalid Number of Columns","white red-text text-accent-4");;return("")}
     if(rows<1 || rows>26)
-        {alert("Invalid number of rows");return("")}
+        {toaster("Invalid Number of Rows","white red-text text-accent-4");;return("")}
     seathtml="";
     seatingheader = `
     <div class="rowx">

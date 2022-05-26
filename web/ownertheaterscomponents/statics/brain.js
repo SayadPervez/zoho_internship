@@ -67,7 +67,7 @@ function deletefunc(id){
 						    		window.location.href="/MovieTicketsTiles/ownertheaterspage";
 								},
 						        error: function(result) {
-						            alert('AJAX Erred');
+						            toaster("AJAX Erred","white red-text text-accent-4");
 						        }
 						    });
 }
@@ -135,7 +135,7 @@ function addToTheatersDiv(data){
 				    		console.log(result);
 						},
 				        error: function(result) {
-				            alert('AJAX Erred');
+				            toaster("AJAX Erred","white red-text text-accent-4");
 				        }
 				    });
 		}
@@ -204,11 +204,11 @@ $("#savechanges").click( ()=>{
     		 {window.location.href="/MovieTicketsTiles/ownertheaterspage";
     		 $("#actid").text("")}
     		 else
-    		 {alert("JSP returned error");
+    		 {toaster("JSP Returned Error","white red-text text-accent-4");;
     		 console.log(result)}
 		},
         error: function(result) {
-            alert('AJAX DIDNT GET SENT PROPERLY');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });
 	
@@ -252,11 +252,11 @@ $("#submitbutton").click( ()=>{
     		if(result==="success")
     		 {window.location.href="/MovieTicketsTiles/ownertheaterspage";}
     		 else
-    		 {alert("JSP returned error");
+    		 {toaster("JSP Returned Error","white red-text text-accent-4");
     		 console.log(result)}
 		},
         error: function(result) {
-            alert('AJAX DIDNT GET SENT PROPERLY');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });
 	

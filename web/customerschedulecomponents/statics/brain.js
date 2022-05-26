@@ -45,7 +45,7 @@ $(document).ready(function(){
 				    });
 			},
 	        error: function(result) {
-	            alert('AJAX Erred');
+	            toaster("AJAX Erred","white red-text text-accent-4");
 	        }
 	    });
     
@@ -56,6 +56,9 @@ $(document).ready(function(){
 $("#submitbutton").click(()=>{
 	console.log("Submit button clicked. Take me to seat bookings page")
 	console.log("Selected show id", selected_showid);
+	waiter("Cancelling Show","white red-text text-accent-4");
+	waiter("Processing Refunds","white green-text text-accent-4");
+	waiter("Please Wait...","white green-text text-accent-4");
 	$.ajax({
 	        type: "POST",
 	        url: `/MovieTicketsTiles/cancelShows`,
@@ -63,11 +66,11 @@ $("#submitbutton").click(()=>{
 	        	sid:selected_showid
 	        },
 	        success: function (result,textStatus,xhrreq) {
-	        	alert(result);
+	        	toaster(result,"white green-text text-accent-4");
 	        	location.reload();
 			},
 	        error: function(result) {
-	            alert('AJAX Erred');
+	            toaster("AJAX Erred","white red-text text-accent-4");
 	        }
 	    });
 });

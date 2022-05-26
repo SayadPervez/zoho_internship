@@ -26,14 +26,14 @@ $("#editbutton").click(function(){
         },
         success: function (result,textStatus,xhrreq) {
     		if(result==="success")
-    		 {alert("User Wallet Updated");
+    		 {toaster("User Wallet Updated","white green-text text-accent-4");
     		 window.location.href="/MovieTicketsTiles/customerwalletpage";}
     		 else
     		 {
-    		 alert("ajax failure");}
+                toaster("Wallet Updation Failed","white red-text text-accent-4");}
 		},
         error: function(result) {
-            alert('error');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     	});
     	

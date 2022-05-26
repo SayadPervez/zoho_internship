@@ -121,6 +121,11 @@
     			 <result name="error">commoncomponents/error.jsp</result>
     			 <result name="login" type="tiles">loginpage</result>
     		  </action>
+    		  <action name="statsSeats" class="actionPack.viewBookedSeats">
+    			 <result name="success" type="tiles">statsseating</result>
+    			 <result name="error">commoncomponents/error.jsp</result>
+    			 <result name="login" type="tiles">loginpage</result>
+    		  </action>
     		  <action name="deleteTheater" class="actionPack.deleteTheater">
     			 <result name="success">commoncomponents/success.jsp</result>
     			 <result name="error">commoncomponents/error.jsp</result>
@@ -259,6 +264,12 @@
     		  </action>
     		  <action name="ownerseatspagecss">
     			 <result>ownerseatscomponents/statics/skin.css</result>
+    		  </action>
+    		  <action name="statsseatspagejs">
+    			 <result>statsseatscomponents/statics/brain.js</result>
+    		  </action>
+    		  <action name="statsseatspagecss">
+    			 <result>statsseatscomponents/statics/skin.css</result>
     		  </action>
     		  <action name="ownertheaterspagejs">
     			 <result>ownertheaterscomponents/statics/brain.js</result>

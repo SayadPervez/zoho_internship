@@ -35,14 +35,14 @@ $("#editbutton").click(function(){
         },
         success: function (result,textStatus,xhrreq) {
     		if(result==="success")
-    		 {alert("User Data Updated");
+    		 {toaster("User Data Updated","white green-text text-accent-4");
     		 window.location.href="/MovieTicketsTiles/homepage";}
     		 else
     		 {
-    		 alert("ajax failure");}
+                toaster("User Data Updation Failed","white red-text text-accent-4");}
 		},
         error: function(result) {
-            alert('error');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     	});
     	

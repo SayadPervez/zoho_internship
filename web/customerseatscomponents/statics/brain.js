@@ -109,7 +109,9 @@ function setbutton(){
 		  var instance = M.Modal.getInstance($("#modal1"));
 		  instance.open();
     }
-    else{alert("No seats selected to pay for");}
+    else{
+		toaster("No seats selected to pay for","white red-text text-accent-4");
+	}
 }
 
 function paybutton()
@@ -117,6 +119,8 @@ function paybutton()
 	console.log("paybutton got clicked")
 	if(!paymentPossible)
 	{
+		waiter("Processing...","white green-text text-accent-4");
+		waiter("Please Wait","white green-text text-accent-4");
 		$.ajax({
 			    type: "POST",
 			    url: "/MovieTicketsTiles/finalizeTicket",
@@ -127,19 +131,20 @@ function paybutton()
 			    },
 			    success: function (result,textStatus,xhrreq) {
 					if(result==="success")
-					 {alert("success");window.location.href=`/MovieTicketsTiles/customerschedulepage`;}
+					 {
+					 toaster("Success","white green-text text-accent-4");window.location.href=`/MovieTicketsTiles/customerschedulepage`;}
 					 else
 					 {
-					 alert(result)
+						toaster(result,"white red-text text-accent-4");
 					 }
 				},
 			    error: function(result) {
-			        alert('AJAX error');
+			        toaster("AJAX Erred","white red-text text-accent-4");
 			    }
 			});
 	}
 	else{
-		alert("Insufficient Funds");
+		toaster("Insufficient Funds","white red-text text-accent-4");
 		window.location.href = '/MovieTicketsTiles/customerwalletpage';
 	}
 }
@@ -155,9 +160,13 @@ $(document).on('keydown', function(event) {
 function populateSeats(rows,cols)
 {
     if(cols<1 || cols>50)
-        {alert("Invalid number of columns");return("")}
+        {
+		toaster("Invalid Number of Columns","white red-text text-accent-4");
+		return("")}
     if(rows<1 || rows>26)
-        {alert("Invalid number of rows");return("")}
+        {
+		toaster("Invalid Number of Rows","white red-text text-accent-4");
+		return("")}
     seathtml="";
     seatingheader = `
     <div class="rowx">

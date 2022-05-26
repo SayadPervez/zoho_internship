@@ -36,7 +36,7 @@ $("#forgot_button").click(function(e) {
 			    		 }
 					},
 			        error: function(result) {
-			            alert('error');
+			            toaster("AJAX Erred","white red-text text-accent-4");
 			        }
 			    });
 	}
@@ -63,7 +63,7 @@ $("#forgot_button").click(function(e) {
 			    		 }
 					},
 			        error: function(result) {
-			            alert('error');
+			            toaster("AJAX Erred","white red-text text-accent-4");
 			        }
 			    });
 		

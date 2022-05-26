@@ -1,0 +1,1 @@
+<script src="statsseatspagejs"></script>

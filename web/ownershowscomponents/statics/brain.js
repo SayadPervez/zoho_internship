@@ -32,13 +32,13 @@ $(document).ready(function(){
 									}); 
 							},
 					        error: function(result) {
-					            alert('AJAX Erred');
+					            toaster("AJAX Erred","white red-text text-accent-4");
 					        }
 					    });		
     		});
 		},
         error: function(result) {
-            alert('AJAX Erred');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });
     
@@ -52,7 +52,7 @@ $(document).ready(function(){
     		
 		},
         error: function(result) {
-            alert('AJAX Erred');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });*/
     
@@ -86,7 +86,7 @@ $("#modalbutton").click( ()=>{
     		validateNumber+=1;
 		},
         error: function(result) {
-            alert('AJAX Erred');
+            toaster("AJAX Erred","white red-text text-accent-4");
         }
     });
 	
@@ -175,7 +175,7 @@ $("#submitbutton").click(()=>{
 	    		
 			},
 	        error: function(result) {
-	            alert('AJAX Erred');
+	            toaster("AJAX Erred","white red-text text-accent-4");
 	        }
 	    });
 	});
@@ -196,7 +196,7 @@ function deletefunc(id)
 					    		window.location.href = `/MovieTicketsTiles/ownershowspage`
 							},
 					        error: function(result) {
-					            alert('AJAX Erred');
+					            toaster("AJAX Erred","white red-text text-accent-4");
 					        }
 					    });	
 }
@@ -205,6 +205,7 @@ function seatfunc(id)
 {
 	actid = id.replace("seat_","");
 	console.log(actid);
+	window.location.href = `/MovieTicketsTiles/statsSeats?sid=${actid.replaceAll("|","$")}`;
 }
 
 function setupfunc(id)
@@ -224,7 +225,6 @@ function append2tbody(jsonobject)
 		<td>${jsonobject.duration}</td>
 		<td>${jsonobject.date}</td>
 		<td>
-			<span class="material-icons setup" id="setup_${jsonobject.theaternumber}|${jsonobject.screennumber}|${jsonobject.date}|${jsonobject.slot}" onclick="setupfunc(this.id)">settings</span>
 			<span class="material-icons seatlayout" id="seat_${jsonobject.theaternumber}|${jsonobject.screennumber}|${jsonobject.date}|${jsonobject.slot}"  onclick="seatfunc(this.id)">chair</span>
 			<span class="material-icons delete" id="delete_${jsonobject.theaternumber}|${jsonobject.screennumber}|${jsonobject.date}|${jsonobject.slot}" onclick="deletefunc(this.id)">delete_forever</span>
 		</td>

@@ -18,11 +18,11 @@ if($("#pwd").val()==$("#pwdc").val())
 			    		 }
 					},
 			        error: function(result) {
-			            alert('error');
+			            toaster("AJAX Erred","white red-text text-accent-4");
 			        }
 			    });
 }
 else{
-	alert("Password do not match !!");
+	toaster("Passwords Do Not Match !!!","white red-text text-accent-4");
 }
 });
