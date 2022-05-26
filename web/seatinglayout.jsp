@@ -24,5 +24,21 @@
 <%@ include file="/commoncomponents/footerhome.jsp" %>  
 </div>
 <tiles:insertAttribute name="bodyImports" />
+<script>
+function toaster(data,classes="",rounded=true)
+{
+  if(rounded)
+    M.toast({html: "<strong>"+data+"</strong>", classes: 'rounded '+classes ,displayLength:1500});
+  else
+    M.toast({html: "<strong>"+data+"</strong>", classes: classes ,displayLength:1500});
+}
+function waiter(data,classes="",rounded=true)
+{
+  if(rounded)
+    M.toast({html: "<strong>"+data+"</strong>", classes: 'rounded '+classes ,displayLength:30000});
+  else
+    M.toast({html: "<strong>"+data+"</strong>", classes: classes ,displayLength:30000});
+}
+</script>
 </body>  
 </html>   

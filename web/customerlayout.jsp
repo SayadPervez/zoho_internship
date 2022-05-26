@@ -54,6 +54,23 @@ $("#logout").click(function(e) {
     window.location.href="/MovieTicketsTiles/logout";
 });
 </script>
+<script>
+function toaster(data,classes="",rounded=true)
+{
+  if(rounded)
+    M.toast({html: "<strong>"+data+"</strong>", classes: 'rounded '+classes ,displayLength:1500});
+  else
+    M.toast({html: "<strong>"+data+"</strong>", classes: classes ,displayLength:1500});
+}
+
+function waiter(data,classes="",rounded=true)
+{
+  if(rounded)
+    M.toast({html: "<strong>"+data+"</strong>", classes: 'rounded '+classes ,displayLength:30000});
+  else
+    M.toast({html: "<strong>"+data+"</strong>", classes: classes ,displayLength:30000});
+}
+</script>
 <tiles:insertAttribute name="bodyImports" />
 </body>  
 </html>   

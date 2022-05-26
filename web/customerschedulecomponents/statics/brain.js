@@ -21,7 +21,6 @@ $(document).ready(function(){
     $('.modal').modal();
     todayDate = new Date().toJSON().slice(0,10);
     $('select').formSelect();
-    
     $.ajax({
 	        type: "POST",
 	        url: "/MovieTicketsTiles/myShowsAPI",

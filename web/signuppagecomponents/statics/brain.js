@@ -7,6 +7,8 @@ window.onload = function(e){
 $("#signup_button").click(function(e) {
     e.preventDefault();
     $("#signup_button").text("Loading ...");
+    waiter("Processing...","white red-text text-accent-4",true)
+    waiter("Please wait","white red-text text-accent-4",true)
 	
     
     $.ajax({

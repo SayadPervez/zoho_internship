@@ -29,10 +29,10 @@ $("#login_button").click(function(e) {
     		 window.location.href="/MovieTicketsTiles/homepage";}
     		 else
     		 {
-    		 window.location.href="commoncomponents/error.jsp";}
+    		 toaster("Check your credentials again !!","white red-text text-accent-4");}
 		},
         error: function(result) {
-            alert('error');
+            toaster("Check your credentials again !!","white red-text text-accent-4");
         }
     });
 });
