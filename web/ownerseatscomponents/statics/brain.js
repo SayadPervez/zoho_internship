@@ -4,8 +4,39 @@ const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P
 var dbseats;
 var myrefid;
 
+var historyx = [];
+
 
 var seatsJson = {};
+
+function undo()
+{
+	console.log("Undo pressed");
+	if(historyx.length>1)
+	{
+	x = historyx[0];
+	console.log(x,historyx.length);
+	historyx.shift();
+	popseats();
+	colorseats(x);
+	}
+}
+
+function colorseats(jdata)
+{
+	Object.entries(jdata).forEach(([key, value]) => {
+		    if(key!="header")
+		    {
+		    	if(value=="n")
+		    		$(`#${key}`).css("visibility","hidden");
+		    	if(value=="f")
+		    		$(`#${key}`).css("color","#ff8f00");
+		    	if(value=="p")
+		    		$(`#${key}`).css("color","#4caf50");
+		    }
+		    seatsJson[key] = value;
+		});
+}
 
 //       Seat click events
 function seatclickfunc(id)
@@ -35,6 +66,8 @@ function seatclickfunc(id)
         obj.style.visibility="hidden";
         seatsJson[id] = "n";
     }
+    historyx.push(JSON.parse(JSON.stringify(seatsJson)));
+    console.log("Pushed to history")
 }
 
 //        FAB EVENTS
@@ -87,6 +120,7 @@ $(document).on('keydown', function(e) {
        modeObj.innerText="DELETE MODE"
        modeObj.style.backgroundColor="#d50000";
        modeObj.style.color="white";
+       console.log("History",historyx);
     }
 });
 $(document).on('keyup', function(e) {

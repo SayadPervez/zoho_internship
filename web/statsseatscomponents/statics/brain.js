@@ -211,7 +211,26 @@ $(document).ready(()=>{
 					    title: {
 					      display: true,
 					      text: "Class wise Price"
-					    }
+					    },legend:{display:false},scales: {
+            xAxes: [{
+                    stacked: true,
+                    ticks: {
+                        fontColor: this.tickColor
+                    },
+                    gridLines: {
+                        drawOnChartArea: false
+                    }
+                }],
+            yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        fontColor: this.tickColor,
+                        min: 0,
+                        max: 175,
+                        stepSize: 25
+                    }
+                }]
+        }
 					  }
 					});
 					
