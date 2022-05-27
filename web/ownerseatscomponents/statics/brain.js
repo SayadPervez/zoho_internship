@@ -17,7 +17,6 @@ function undo()
 	x = historyx.pop();
 	popseats();
 	colorseats(x);
-	seatsJson = (JSON.parse(JSON.stringify(x)));
 	}
 	
 }
