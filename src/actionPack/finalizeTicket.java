@@ -13,6 +13,15 @@ import dbassistPack.getEmailID;
 
 import dbassistPack.UID;
 
+class lockObject{
+	
+	private String key;
+	
+	lockObject(String k) {
+		this.key = k;
+	}
+}
+
 public class finalizeTicket implements SessionAware{
 	private SessionMap<String,Object> sessionMap;
 	
@@ -20,7 +29,7 @@ public class finalizeTicket implements SessionAware{
 	private String myseats;
 	private String totalcost;
 	
-	public synchronized String execute() throws Exception
+	public String execute() throws Exception
 	{
 		if(
 				((String) sessionMap.get("logged-in")).equals("true")
@@ -35,11 +44,14 @@ public class finalizeTicket implements SessionAware{
 			UID uid = new UID();
 			int uidCustomer = uid.getUID((String) sessionMap.get("user-name"));
 			
-			String ipAddressMYSQL = "127.0.0.1";
-			String portMYSQL = "3306";
-			String databaseName = "tms";
-			String urlMYSQL = "jdbc:mysql://"+ipAddressMYSQL+":"+portMYSQL+"/"+databaseName;
-			System.out.println(urlMYSQL);
+			lockObject l = new lockObject(sid+myseats);
+			
+			synchronized(l) {
+				String ipAddressMYSQL = "127.0.0.1";
+				String portMYSQL = "3306";
+				String databaseName = "tms";
+				String urlMYSQL = "jdbc:mysql://"+ipAddressMYSQL+":"+portMYSQL+"/"+databaseName;
+				System.out.println(urlMYSQL);
 			
 			String usernameMYSQL = "root";
 			String passwordMYSQL = "root123";
@@ -97,6 +109,7 @@ public class finalizeTicket implements SessionAware{
 			{
 				return("error");
 			}
+			}// <-- sync closing braces
 		}
 		else {
 			return("login");
