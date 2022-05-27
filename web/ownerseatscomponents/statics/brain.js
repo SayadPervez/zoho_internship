@@ -12,14 +12,14 @@ var seatsJson = {};
 function undo()
 {
 	console.log("Undo pressed");
-	if(historyx.length>1)
+	if(historyx.length>0)
 	{
-	x = historyx[0];
-	console.log(x,historyx.length);
-	historyx.shift();
+	x = historyx.pop();
 	popseats();
 	colorseats(x);
+	seatsJson = (JSON.parse(JSON.stringify(x)));
 	}
+	
 }
 
 function colorseats(jdata)
@@ -167,6 +167,7 @@ $(document).ready(()=>{
 		$("#p_price").val(dbseats.header.premium);
 		$("#e_price").val(dbseats.header.economy);
     }
+    historyx.push(JSON.parse(JSON.stringify(seatsJson)));
 });
 
 //        Materlize FAB
